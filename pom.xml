@@ -261,5 +261,6 @@
     </build>
 
     <modules>
+      <module>spring-demo-annotations</module>
     </modules>
 </project>
