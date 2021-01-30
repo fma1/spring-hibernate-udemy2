@@ -6,7 +6,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 object SpringDemoApp {
   def main(args: Array[String]): Unit = {
     val appContext = new AnnotationConfigApplicationContext(classOf[AppConfig])
-    val coach = appContext.getBean(classOf[Coach])
+    val coach = appContext.getBean("tennisCoach", classOf[Coach])
     println(coach.getDailyWorkout)
     appContext.close()
   }
