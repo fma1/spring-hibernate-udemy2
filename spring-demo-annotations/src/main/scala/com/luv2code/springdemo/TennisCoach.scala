@@ -2,11 +2,13 @@ package com.luv2code.springdemo
 
 import com.luv2code.springdemo.service.FortuneService
 import org.springframework.beans.factory.annotation.{Autowired, Qualifier}
+import org.springframework.context.annotation.Scope
 import org.springframework.stereotype.Component
 
 import scala.beans.BeanProperty
 
 @Component
+@Scope("prototype")
 class TennisCoach extends Coach {
   @Autowired
   @BeanProperty
