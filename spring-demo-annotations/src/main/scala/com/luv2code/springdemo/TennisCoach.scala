@@ -8,10 +8,16 @@ import scala.beans.BeanProperty
 
 @Component
 class TennisCoach extends Coach {
-  @Autowired
+  // @Autowired
   @BeanProperty
   var fortuneService: FortuneService = _
 
   override def getDailyWorkout: String = "Do ten pushups."
   override def getDailyFortune: String = fortuneService.getDailyFortune
+
+  @Autowired
+  def doSomeCrazyStuff(fortuneService: FortuneService): Unit = {
+    println("Doing some crazy stuff!")
+    this.fortuneService = fortuneService
+  }
 }
