@@ -6,9 +6,9 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 object AnnotationDemoApp {
   def main(args: Array[String]): Unit = {
     val appContext = new AnnotationConfigApplicationContext(classOf[AppConfig])
+    scala.sys.addShutdownHook({appContext.close()})
     val coach = appContext.getBean("tennisCoach", classOf[Coach])
     println(coach.getDailyWorkout)
     println(coach.getDailyFortune)
-    appContext.close()
   }
 }
