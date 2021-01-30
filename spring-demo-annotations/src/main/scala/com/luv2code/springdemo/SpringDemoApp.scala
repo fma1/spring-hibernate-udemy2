@@ -8,6 +8,7 @@ object SpringDemoApp {
     val appContext = new AnnotationConfigApplicationContext(classOf[AppConfig])
     val coach = appContext.getBean("tennisCoach", classOf[Coach])
     println(coach.getDailyWorkout)
+    println(coach.getDailyFortune)
     appContext.close()
   }
 }
