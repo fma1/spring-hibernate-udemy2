@@ -273,5 +273,6 @@
 
     <modules>
       <module>spring-demo-annotations</module>
+      <module>spring-mvc-demo</module>
     </modules>
 </project>
