@@ -19,10 +19,10 @@ class TennisCoach extends Coach {
   override def getDailyFortune: String = fortuneService.getDailyFortune
 
   @PostConstruct
-  def postConstruct(): Unit = println("@PostConstruct")
+  def postConstruct(): Unit = println("@PostConstruct in TennisCoach")
 
   @PreDestroy
-  def preDestroy(): Unit = println("@PreDestroy")
+  def preDestroy(): Unit = println("@PreDestroy in TennisCoach")
 
   /*
   @Autowired

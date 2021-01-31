@@ -7,7 +7,8 @@ object AnnotationDemoApp {
   def main(args: Array[String]): Unit = {
     val appContext = new AnnotationConfigApplicationContext(classOf[AppConfig])
     scala.sys.addShutdownHook({appContext.close()})
-    val coach = appContext.getBean("tennisCoach", classOf[Coach])
+    // val coach = appContext.getBean("tennisCoach", classOf[Coach])
+    val coach = appContext.getBean("swimCoach", classOf[Coach])
     println(coach.getDailyWorkout)
     println(coach.getDailyFortune)
   }
