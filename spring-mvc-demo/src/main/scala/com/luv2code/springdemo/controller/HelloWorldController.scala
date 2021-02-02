@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest
 
 //noinspection SpringMVCViewInspection
 @Controller
+@RequestMapping(Array("/hello"))
 class HelloWorldController {
   @RequestMapping(Array("/showForm"))
   def showForm(): String = {
