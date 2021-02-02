@@ -3,7 +3,7 @@ package com.luv2code.springdemo.controller
 import com.luv2code.springdemo.controller.HelloWorldController.{MESSAGE, STUDENT_NAME}
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
-import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.{RequestMapping, RequestParam}
 
 import javax.servlet.http.HttpServletRequest
 
@@ -25,9 +25,17 @@ class HelloWorldController {
     model.addAttribute(MESSAGE, s"Yo, ${request.getParameter(STUDENT_NAME).toUpperCase}!")
     "helloworld"
   }
+
+  @RequestMapping(Array("/processFormV3"))
+  def letsShoutDudeV2(request: HttpServletRequest,
+                      @RequestParam(STUDENT_NAME) theName: String,
+                      model: Model): String = {
+    model.addAttribute(MESSAGE, s"Hey My Friend from v3! ${theName.toUpperCase}!")
+    "helloworld"
+  }
 }
 
 object HelloWorldController {
-  val MESSAGE = "message"
-  val STUDENT_NAME = "studentName"
+  final val MESSAGE = "message"
+  final val STUDENT_NAME = "studentName"
 }
