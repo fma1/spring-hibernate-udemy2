@@ -18,6 +18,6 @@ class AppConfig extends WebMvcConfigurer {
   }
 
   override def addResourceHandlers(registry: ResourceHandlerRegistry): Unit = {
-    registry.addResourceHandler("/resources/**").addResourceLocations("/resources/")
+    registry.addResourceHandler("/static/**").addResourceLocations("classpath:/static/")
   }
 }
