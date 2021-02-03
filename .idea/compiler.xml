@@ -8,10 +8,12 @@
         <outputRelativeToContentRoot value="true" />
         <module name="hibernate-wrapper" />
         <module name="spring-mvc-demo" />
+        <module name="hibernate-tutorial" />
         <module name="spring-demo-annotations" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="hibernate-tutorial" target="1.8" />
       <module name="hibernate-wrapper" target="1.8" />
       <module name="spring-demo-annotations" target="1.8" />
       <module name="spring-hibernate-udemy2" target="1.8" />

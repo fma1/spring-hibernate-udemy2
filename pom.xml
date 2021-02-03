@@ -284,5 +284,6 @@
       <module>spring-demo-annotations</module>
       <module>spring-mvc-demo</module>
       <module>hibernate-wrapper</module>
+      <module>hibernate-tutorial</module>
     </modules>
 </project>
