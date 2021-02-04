@@ -5,7 +5,9 @@ import org.hibernate.SessionFactory
 import org.hibernate.cfg.Configuration
 import org.hibernatewrapper.SessionFactoryWrapper
 
-object CreateSaveDemo {
+import scala.jdk.CollectionConverters._
+
+object QueryStudentDemo {
   def main(args: Array[String]): Unit = {
     val factory: SessionFactory = new Configuration()
       .configure("hibernate.cfg.xml")
@@ -14,8 +16,8 @@ object CreateSaveDemo {
     val sfw = new SessionFactoryWrapper(factory)
 
     sfw.withTransaction() { session =>
-      val tempStudent = new Student("Paul", "Wall", "paul@luv2code.com")
-      session.save(tempStudent)
+      session.createQuery("""from Student s where s.lastName='Doe'""").getResultList.asScala
+        .foreach(println)
     }
 
     factory.close()
