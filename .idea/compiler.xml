@@ -10,9 +10,11 @@
         <module name="spring-mvc-demo" />
         <module name="hibernate-tutorial" />
         <module name="spring-demo-annotations" />
+        <module name="hibernate-employee-exercise" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="hibernate-employee-exercise" target="1.8" />
       <module name="hibernate-tutorial" target="1.8" />
       <module name="hibernate-wrapper" target="1.8" />
       <module name="spring-demo-annotations" target="1.8" />

@@ -285,5 +285,6 @@
       <module>spring-mvc-demo</module>
       <module>hibernate-wrapper</module>
       <module>hibernate-tutorial</module>
+      <module>hibernate-employee-exercise</module>
     </modules>
 </project>

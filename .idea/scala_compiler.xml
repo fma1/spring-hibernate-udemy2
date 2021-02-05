@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="Maven 1" modules="hibernate-tutorial,hibernate-wrapper,spring-demo-annotations,spring-hibernate-udemy2,spring-mvc-demo" />
+    <profile name="Maven 1" modules="hibernate-employee-exercise,hibernate-tutorial,hibernate-wrapper,spring-demo-annotations,spring-hibernate-udemy2,spring-mvc-demo" />
   </component>
 </project>
