@@ -164,7 +164,7 @@ class SessionFactoryWrapper(val sessionFactory: SessionFactory) extends NewCreat
 
 object SessionFactoryWrapper {
   def getSessionFactoryWrapper(clazzAry: Array[Class[_]]): (SessionFactoryWrapper, SessionFactory) = {
-    val config = new org.hibernate.cfg.Configuration().configure("hibernate.cfg.xmk")
+    val config = new org.hibernate.cfg.Configuration().configure("hibernate.cfg.xml")
     clazzAry.foreach(config.addAnnotatedClass)
     val sessionFactory = config.buildSessionFactory()
     val sfw = new SessionFactoryWrapper(sessionFactory)
