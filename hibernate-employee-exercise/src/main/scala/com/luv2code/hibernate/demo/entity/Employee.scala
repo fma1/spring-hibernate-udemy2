@@ -1,5 +1,7 @@
 package com.luv2code.hibernate.demo.entity
 
+import org.hibernatewrapper.util.HBUtil
+
 import java.lang.reflect.Field
 import javax.persistence.{Column, Entity, GeneratedValue, GenerationType, Id, Table}
 import scala.beans.BeanProperty
@@ -28,10 +30,7 @@ class Employee(_firstName: String, _lastName: String, _company: String) {
   private def this() = this(null, null, null)
 
   override def toString: String = {
-    getClass.getDeclaredFields.map { field: Field =>
-      field.setAccessible(true)
-      field.getName + ": " + field.getType + " = " + field.get(this).toString
-    }.mkString("\n")
+    HBUtil.reflectToString(this)
   }
 }
 

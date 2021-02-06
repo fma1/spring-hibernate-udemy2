@@ -2,17 +2,17 @@ package com.luv2code.hibernate.demo.entity
 
 import org.hibernatewrapper.util.HBUtil
 
-import javax.persistence.{Column, Entity, GeneratedValue, GenerationType, Id, Table}
+import javax.persistence._
 import scala.beans.BeanProperty
 
 @Entity
-@Table(name = "student")
-class Student(_firstName: String, _lastName: String, _email: String) {
+@Table(name = "instructor")
+class Instructor(_firstName: String, _lastName: String, _email: String) {
   @Id
   @BeanProperty
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "id")
-  var id: Long = _
+  var id: Int = _
 
   @BeanProperty
   @Column(name = "first_name")
@@ -26,6 +26,11 @@ class Student(_firstName: String, _lastName: String, _email: String) {
   @Column(name = "email")
   var email: String = _email
 
+  @BeanProperty
+  @OneToOne(cascade = Array(CascadeType.ALL))
+  @JoinColumn(name = "instructor_detail_id")
+  var instructorDetail: InstructorDetail = _
+
   private def this() = this(null, null, null)
 
   override def toString: String = {
@@ -33,6 +38,7 @@ class Student(_firstName: String, _lastName: String, _email: String) {
   }
 }
 
-object Student {
-  def apply(firstName: String, lastName: String, email: String) = new Student(firstName, lastName, email)
+object Instructor {
+  def apply(_firstName: String, _lastName: String, _email: String) =
+    new Instructor(_firstName, _lastName, _email)
 }

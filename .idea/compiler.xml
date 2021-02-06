@@ -8,13 +8,16 @@
         <outputRelativeToContentRoot value="true" />
         <module name="hibernate-wrapper" />
         <module name="spring-mvc-demo" />
+        <module name="hb-01-one-to-one-uni" />
         <module name="hibernate-tutorial" />
         <module name="spring-demo-annotations" />
         <module name="hibernate-employee-exercise" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="hb-01-one-to-one-uni" target="1.8" />
       <module name="hibernate-employee-exercise" target="1.8" />
+      <module name="hibernate-employee-exercise (1)" target="1.8" />
       <module name="hibernate-tutorial" target="1.8" />
       <module name="hibernate-wrapper" target="1.8" />
       <module name="spring-demo-annotations" target="1.8" />

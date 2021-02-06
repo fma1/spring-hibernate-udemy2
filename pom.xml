@@ -286,5 +286,6 @@
       <module>hibernate-wrapper</module>
       <module>hibernate-tutorial</module>
       <module>hibernate-employee-exercise</module>
+      <module>hb-01-one-to-one-uni</module>
     </modules>
 </project>
