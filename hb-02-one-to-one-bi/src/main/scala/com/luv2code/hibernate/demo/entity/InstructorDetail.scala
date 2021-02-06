@@ -24,7 +24,9 @@ class InstructorDetail(_youtubeChannel: String, _hobby: String) {
   var hobby: String = _hobby
 
   @BeanProperty
-  @OneToOne(mappedBy = "instructorDetail", cascade = Array(CascadeType.ALL))
+  @OneToOne(mappedBy = "instructorDetail",
+    cascade = Array(CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST,
+      CascadeType.REFRESH))
   var instructor: Instructor = _
 
   private def this() = this(null, null)
