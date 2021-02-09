@@ -1,6 +1,6 @@
 package com.luv2code.hibernate.demo.entity
 
-import java.util.{ArrayList => JArrayList, List => JList}
+import java.util.{List => JList, ArrayList => JArrayList}
 import javax.persistence._
 import scala.beans.BeanProperty
 
