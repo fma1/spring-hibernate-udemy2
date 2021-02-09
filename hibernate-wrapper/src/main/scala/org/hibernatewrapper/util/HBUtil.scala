@@ -7,7 +7,7 @@ object HBUtil {
     val clazz = o.getClass
     val fieldStrAry = clazz.getDeclaredFields.map { field: Field =>
       field.setAccessible(true)
-      field.getName + ": " + field.get(o).toString
+      field.getName + ": " + field.get(o)
     }.mkString(",")
     s"${clazz.getSimpleName}(${fieldStrAry})"
   }
