@@ -36,80 +36,77 @@
             <dependency>
                 <groupId>com.fasterxml.jackson.module</groupId>
                 <artifactId>jackson-module-scala_2.13</artifactId>
-                <version>${jackson.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>com.luv2code</groupId>
                 <artifactId>hibernate-wrapper</artifactId>
-                <version>1.0-SNAPSHOT</version>
             </dependency>
 
             <dependency>
                 <groupId>org.aspectj</groupId>
                 <artifactId>aspectjweaver</artifactId>
-                <version>${aspectj.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-1.2-api</artifactId>
-                <version>${log4j.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-slf4j18-impl</artifactId>
-                <version>${log4j.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-simple</artifactId>
-                <version>${slf4j.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
-                <version>${slf4j.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-api</artifactId>
-                <version>${log4j.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
                 <artifactId>log4j-core</artifactId>
-                <version>${log4j.version}</version>
             </dependency>
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>javax.servlet-api</artifactId>
-                <version>4.0.1</version>
             </dependency>
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>8.0.20</version>
             </dependency>
             <dependency>
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-c3p0</artifactId>
-                <version>${hibernate.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-core</artifactId>
-                <version>${hibernate.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.mchange</groupId>
                 <artifactId>c3p0</artifactId>
-                <version>0.9.5.5</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>jstl</artifactId>
+                <version>1.2</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet.jsp.jstl</groupId>
+                <artifactId>jstl-api</artifactId>
+                <version>1.2</version>
             </dependency>
 
             <dependency>
                 <groupId>org.springframework</groupId>
-                <artifactId>spring-aop</artifactId>
+                <artifactId>spring-tx</artifactId>
                 <version>${spring-framework.version}</version>
             </dependency>
             <dependency>
@@ -131,88 +128,10 @@
             <dependency>
                 <groupId>org.scala-lang</groupId>
                 <artifactId>scala-library</artifactId>
-                <version>${scala.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.scala-lang</groupId>
                 <artifactId>scala-compiler</artifactId>
-                <version>${scala.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter</artifactId>
-                <version>${spring-boot.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.apache.logging.log4j</groupId>
-                        <artifactId>log4j-to-slf4j</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-thymeleaf</artifactId>
-                <version>${spring-boot.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.apache.logging.log4j</groupId>
-                        <artifactId>log4j-to-slf4j</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-web</artifactId>
-                <version>${spring-boot.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.apache.logging.log4j</groupId>
-                        <artifactId>log4j-to-slf4j</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.springframework.boot</groupId>
-                        <artifactId>spring-boot-starter-tomcat</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-tomcat</artifactId>
-                <version>${spring-boot.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.apache.logging.log4j</groupId>
-                        <artifactId>log4j-to-slf4j</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-log4j2</artifactId>
-                <version>${spring-boot.version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.apache.logging.log4j</groupId>
-                        <artifactId>log4j-to-slf4j</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-test</artifactId>
-                <version>${spring-boot.version}</version>
-                <scope>test</scope>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.apache.logging.log4j</groupId>
-                        <artifactId>log4j-to-slf4j</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.junit.vintage</groupId>
-                        <artifactId>junit-vintage-engine</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -292,5 +211,6 @@
       <module>hb-04-one-to-many-uni</module>
       <module>hb-05-many-to-many</module>
       <module>hb-eager-vs-lazy-demo</module>
+      <module>web-customer-tracker</module>
     </modules>
 </project>
