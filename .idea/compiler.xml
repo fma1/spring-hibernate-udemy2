@@ -15,6 +15,7 @@
         <module name="hb-03-one-to-many" />
         <module name="spring-mvc-demo" />
         <module name="hb-01-one-to-one-uni" />
+        <module name="hb-05-many-to-many" />
         <module name="hibernate-employee-exercise" />
       </profile>
     </annotationProcessing>
@@ -23,6 +24,7 @@
       <module name="hb-02-one-to-one-bi" target="1.8" />
       <module name="hb-03-one-to-many" target="1.8" />
       <module name="hb-04-one-to-many-uni" target="1.8" />
+      <module name="hb-05-many-to-many" target="1.8" />
       <module name="hb-eager-vs-lazy-demo" target="1.8" />
       <module name="hibernate-employee-exercise" target="1.8" />
       <module name="hibernate-employee-exercise (1)" target="1.8" />
