@@ -14,10 +14,13 @@
           <element id="module-output" name="web-customer-tracker" />
         </element>
         <element id="directory" name="lib">
+          <element id="archive" name="hibernate-wrapper-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="hibernate-wrapper" />
+          </element>
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:2.0.0-alpha1" />
           <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.13.3" />
           <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-core:2.13.3" />
           <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-slf4j18-impl:2.13.3" />
-          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:2.0.0-alpha1" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.23" />
           <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.11.4" />
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-c3p0:5.4.18.Final" />

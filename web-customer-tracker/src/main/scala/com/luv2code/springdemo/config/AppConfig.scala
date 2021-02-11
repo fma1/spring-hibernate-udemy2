@@ -1,13 +1,18 @@
 package com.luv2code.springdemo.config
 
+import com.mchange.v2.c3p0.ComboPooledDataSource
+import org.hibernatewrapper.SessionFactoryWrapper
 import org.springframework.context.annotation.{Bean, ComponentScan, Configuration}
+import org.springframework.orm.hibernate5.{HibernateTransactionManager, LocalSessionFactoryBean}
+import org.springframework.transaction.PlatformTransactionManager
 import org.springframework.web.servlet.ViewResolver
-import org.springframework.web.servlet.config.annotation.{EnableWebMvc, ResourceHandlerRegistry, ViewControllerRegistry, WebMvcConfigurer}
+import org.springframework.web.servlet.config.annotation.{DefaultServletHandlerConfigurer, EnableWebMvc, ResourceHandlerRegistry, ViewControllerRegistry, WebMvcConfigurer}
 import org.springframework.web.servlet.view.InternalResourceViewResolver
 
 @EnableWebMvc
 @Configuration
 @ComponentScan(basePackages = Array(
+  "com.luv2code.springdemo.controller",
   "com.luv2code.springdemo.service",
   "com.luv2code.springdemo.dao",
   "com.luv2code.springdemo.entity"))
@@ -45,7 +50,7 @@ class AppConfig extends WebMvcConfigurer {
   def sessionFactoryWrapper = new SessionFactoryWrapper(sessionFactory().getObject)
 
   private def hibernateProperties = {
-    val hibernateProperties = new Properties
+    val hibernateProperties = new java.util.Properties
     hibernateProperties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect")
     hibernateProperties.setProperty("show-sql", "true")
     hibernateProperties
