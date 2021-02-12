@@ -26,7 +26,7 @@ class Customer(_firstName: String, _lastName: String, _email: String) {
   @Column(name = "email")
   var email: String = _email
 
-  private def this() = this(null, null, null)
+  def this() = this(null, null, null)
 
   override def toString: String = {
     HBUtil.reflectToString(this)

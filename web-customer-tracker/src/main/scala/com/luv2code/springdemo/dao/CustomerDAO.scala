@@ -14,7 +14,12 @@ class CustomerDAO {
 
   def getCustomers: JList[Customer] = {
     sessionFactory.getCurrentSession
-      .createQuery("from Customer", classOf[Customer])
+      .createQuery("from Customer order by lastName", classOf[Customer])
       .getResultList
+  }
+
+  def saveCustomer(customer: Customer): Unit = {
+    sessionFactory.getCurrentSession
+      .save(customer)
   }
 }
