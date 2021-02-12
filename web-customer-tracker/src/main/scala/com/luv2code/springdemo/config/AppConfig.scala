@@ -5,17 +5,14 @@ import org.hibernatewrapper.SessionFactoryWrapper
 import org.springframework.context.annotation.{Bean, ComponentScan, Configuration}
 import org.springframework.orm.hibernate5.{HibernateTransactionManager, LocalSessionFactoryBean}
 import org.springframework.transaction.PlatformTransactionManager
-import org.springframework.web.servlet.ViewResolver
+import org.springframework.transaction.annotation.EnableTransactionManagement
 import org.springframework.web.servlet.config.annotation.{DefaultServletHandlerConfigurer, EnableWebMvc, ResourceHandlerRegistry, ViewControllerRegistry, WebMvcConfigurer}
 import org.springframework.web.servlet.view.InternalResourceViewResolver
 
 @EnableWebMvc
+@EnableTransactionManagement
 @Configuration
-@ComponentScan(basePackages = Array(
-  "com.luv2code.springdemo.controller",
-  "com.luv2code.springdemo.service",
-  "com.luv2code.springdemo.dao",
-  "com.luv2code.springdemo.entity"))
+@ComponentScan(basePackages = Array("com.luv2code.springdemo.*"))
 class AppConfig extends WebMvcConfigurer {
   @Bean
   def sessionFactory(): LocalSessionFactoryBean = {

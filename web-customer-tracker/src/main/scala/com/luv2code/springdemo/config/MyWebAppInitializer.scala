@@ -13,6 +13,8 @@ class MyWebAppInitializer extends WebApplicationInitializer {
     rootContext.register(classOf[AppConfig])
     rootContext.setServletContext(container)
 
+    // Using one application context since Spring Boot does the same
+    // https://stackoverflow.com/a/21320544
     val dispatcher = container.addServlet("dispatcher", new DispatcherServlet(rootContext))
     dispatcher.setLoadOnStartup(1)
     dispatcher.addMapping("/")

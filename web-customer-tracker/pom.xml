@@ -23,6 +23,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.glassfish.web</groupId>
+            <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>com.luv2code</groupId>
             <artifactId>hibernate-wrapper</artifactId>
         </dependency>
