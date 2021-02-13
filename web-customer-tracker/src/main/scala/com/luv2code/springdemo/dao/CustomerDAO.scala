@@ -12,6 +12,11 @@ class CustomerDAO {
   @Autowired
   private var sessionFactory: SessionFactory = _
 
+  def getCustomerById(customerId: Int): Customer = {
+    sessionFactory.getCurrentSession
+      .get(classOf[Customer], customerId)
+  }
+
   def getCustomers: JList[Customer] = {
     sessionFactory.getCurrentSession
       .createQuery("from Customer order by lastName", classOf[Customer])
@@ -20,6 +25,13 @@ class CustomerDAO {
 
   def saveCustomer(customer: Customer): Unit = {
     sessionFactory.getCurrentSession
-      .save(customer)
+      .saveOrUpdate(customer)
   }
+
+  /*
+  def updateCustomer(customerId: Int): Customer = {
+    val session = sessionFactory.getCurrentSession
+    val customer = session.get(classOf[Customer], customerId)
+  }
+   */
 }

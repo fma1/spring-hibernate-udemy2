@@ -4,7 +4,7 @@ import com.luv2code.springdemo.entity.Customer
 import com.luv2code.springdemo.service.CustomerService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Controller
-import org.springframework.web.bind.annotation.{GetMapping, ModelAttribute, PostMapping, RequestMapping}
+import org.springframework.web.bind.annotation.{GetMapping, ModelAttribute, PostMapping, RequestMapping, RequestParam}
 import org.springframework.ui.Model
 
 
@@ -29,6 +29,12 @@ class CustomerController {
   @GetMapping(Array("/showFormForAdd"))
   def showFormForAdd(model: Model): String = {
     model.addAttribute("customer", new Customer())
+    "customer-form"
+  }
+
+  @GetMapping(Array("/showFormForUpdate"))
+  def showFormForUpdate(@RequestParam customerId: Int, model: Model): String = {
+    model.addAttribute("customer", customerService.getCustomerById(customerId))
     "customer-form"
   }
 }

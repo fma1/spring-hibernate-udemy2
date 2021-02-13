@@ -14,6 +14,11 @@ class CustomerService {
   private var customerDAO: CustomerDAO = _
 
   @Transactional
+  def getCustomerById(customerId: Int): Customer = {
+    customerDAO.getCustomerById(customerId)
+  }
+
+  @Transactional
   def getCustomers: JList[Customer] = {
     customerDAO.getCustomers
   }
