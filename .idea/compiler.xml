@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hb-04-one-to-many-uni" />
+        <module name="spring-security-demo" />
         <module name="hb-eager-vs-lazy-demo" />
         <module name="hibernate-tutorial" />
         <module name="spring-demo-annotations" />
@@ -35,6 +36,7 @@
       <module name="spring-demo-annotations" target="1.8" />
       <module name="spring-hibernate-udemy2" target="1.8" />
       <module name="spring-mvc-demo" target="1.8" />
+      <module name="spring-security-demo" target="1.8" />
       <module name="web-customer-tracker" target="1.8" />
       <module name="web-customer-tracker-aop" target="1.8" />
     </bytecodeTargetLevel>
