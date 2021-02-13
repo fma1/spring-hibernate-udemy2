@@ -26,6 +26,12 @@ class CustomerController {
     "redirect:/customer/list"
   }
 
+  @GetMapping(Array("/deleteCustomer"))
+  def deleteCustomer(@RequestParam customerId: Int): String = {
+    customerService.deleteCustomer(customerId)
+    "redirect:/customer/list"
+  }
+
   @GetMapping(Array("/showFormForAdd"))
   def showFormForAdd(model: Model): String = {
     model.addAttribute("customer", new Customer())

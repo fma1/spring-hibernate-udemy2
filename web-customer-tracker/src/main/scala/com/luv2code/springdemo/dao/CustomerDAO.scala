@@ -28,10 +28,8 @@ class CustomerDAO {
       .saveOrUpdate(customer)
   }
 
-  /*
-  def updateCustomer(customerId: Int): Customer = {
-    val session = sessionFactory.getCurrentSession
-    val customer = session.get(classOf[Customer], customerId)
+  def deleteCustomer(customerId: Int): Unit = {
+    val customer = getCustomerById(customerId)
+    sessionFactory.getCurrentSession.delete(customer)
   }
-   */
 }

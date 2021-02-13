@@ -27,4 +27,9 @@ class CustomerService {
   def saveCustomer(customer: Customer): Unit = {
     customerDAO.saveCustomer(customer)
   }
+
+  @Transactional
+  def deleteCustomer(customerId: Int): Unit = {
+    customerDAO.deleteCustomer(customerId)
+  }
 }
