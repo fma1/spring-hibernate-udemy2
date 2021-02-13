@@ -14,12 +14,6 @@
           <element id="module-output" name="spring-security-demo" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: org.glassfish.web:jakarta.servlet.jsp.jstl:1.2.6" />
-          <element id="library" level="project" name="Maven: jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:1.2.4" />
-          <element id="library" level="project" name="Maven: jakarta.servlet:jakarta.servlet-api:4.0.2" />
-          <element id="library" level="project" name="Maven: jakarta.el:jakarta.el-api:3.0.2" />
-          <element id="library" level="project" name="Maven: javax.servlet.jsp:javax.servlet.jsp-api:2.3.3" />
-          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:4.0.1" />
           <element id="archive" name="hibernate-wrapper-1.0-SNAPSHOT.jar">
             <element id="module-output" name="hibernate-wrapper" />
           </element>
@@ -50,15 +44,24 @@
           <element id="library" level="project" name="Maven: com.sun.xml.fastinfoset:FastInfoset:1.2.15" />
           <element id="library" level="project" name="Maven: com.mchange:c3p0:0.9.5.5" />
           <element id="library" level="project" name="Maven: com.mchange:mchange-commons-java:0.2.19" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.2.8.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.2.8.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-core:5.2.8.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.2.8.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.2.8.RELEASE" />
+          <element id="library" level="project" name="Maven: org.glassfish.web:jakarta.servlet.jsp.jstl:1.2.6" />
+          <element id="library" level="project" name="Maven: jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:1.2.4" />
+          <element id="library" level="project" name="Maven: jakarta.servlet:jakarta.servlet-api:4.0.2" />
+          <element id="library" level="project" name="Maven: jakarta.el:jakarta.el-api:3.0.2" />
+          <element id="library" level="project" name="Maven: javax.servlet.jsp:javax.servlet.jsp-api:2.3.3" />
+          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:4.0.1" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:5.4.4" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:5.4.4" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.2.8.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.2.12.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:5.2.8.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.2.8.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-web:5.2.8.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:5.2.12.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.2.12.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.2.12.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:5.2.12.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:5.4.4" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.2.8.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.2.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-orm:5.2.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:5.2.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.scala-lang:scala-library:2.13.4" />
