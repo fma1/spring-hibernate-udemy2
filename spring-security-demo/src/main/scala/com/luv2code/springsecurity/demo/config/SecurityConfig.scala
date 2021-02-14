@@ -2,10 +2,12 @@ package com.luv2code.springsecurity.demo.config
 
 import org.springframework.context.annotation.Configuration
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder
+import org.springframework.security.config.annotation.web.builders.HttpSecurity
 import org.springframework.security.config.annotation.web.configuration.{EnableWebSecurity, WebSecurityConfigurerAdapter}
 import org.springframework.security.core.userdetails.User
 import org.springframework.security.core.userdetails.User.UserBuilder
 
+//noinspection ScalaDeprecation
 @Configuration
 @EnableWebSecurity
 class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -16,5 +18,23 @@ class SecurityConfig extends WebSecurityConfigurerAdapter {
       .withUser(users.username("john").password("test123").roles("EMPLOYEE"))
       .withUser(users.username("mary").password("test123").roles("MANAGER"))
       .withUser(users.username("susan").password("test123").roles("ADMIN"))
+  }
+
+  override def configure(http: HttpSecurity): Unit = {
+    /*
+     * authorizeRequests() -> Restrict access based on HttpServletRequest using RequestMatcher implementations
+     * anyRequest().authenticated() -> Restrict access based on authentication/Any request to app must be authenticated
+     * formLogin() - Customize form login process
+     * ..loginPage() - Show our custom form at mapping "/showMyLoginPage"
+     * ..loginProcessingUrl() - Login form should POST data to this URL for processing (to check username and password)
+     * ..permitAll() - Let everyone see the login page; no need to be authenticated
+     */
+    http.authorizeRequests()
+          .anyRequest().authenticated()
+        .and()
+        .formLogin()
+          .loginPage("/showMyLoginPage")
+          .loginProcessingUrl("/authenticateTheUser")
+          .permitAll()
   }
 }
