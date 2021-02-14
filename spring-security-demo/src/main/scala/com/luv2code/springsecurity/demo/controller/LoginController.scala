@@ -6,5 +6,5 @@ import org.springframework.web.bind.annotation.GetMapping
 @Controller
 class LoginController {
   @GetMapping(Array("/showMyLoginPage"))
-  def showHome(): String = "plain-login"
+  def showHome(): String = "fancy-login"
 }
