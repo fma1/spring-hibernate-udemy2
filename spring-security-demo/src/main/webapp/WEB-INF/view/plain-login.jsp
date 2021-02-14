@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +16,9 @@
     <body>
         <h3>My Custom Login Page</h3>
         <form:form action="${pageContext.request.contextPath}/authenticateTheUser" method="post">
+            <c:if test="${param.error != null}">
+                <em>Sorry! You entered an invalid username/password.</em>
+            </c:if>
             <p>
                 <label>
                     User name: <input type="text" name="username" />
