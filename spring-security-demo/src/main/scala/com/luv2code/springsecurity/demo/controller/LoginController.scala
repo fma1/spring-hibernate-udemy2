@@ -7,4 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping
 class LoginController {
   @GetMapping(Array("/showMyLoginPage"))
   def showHome(): String = "fancy-login"
+
+  @GetMapping(Array("/access-denied"))
+  def showAccessDenied(): String = "access-denied"
 }
