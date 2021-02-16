@@ -1,23 +1,21 @@
 package com.luv2code.springsecurity.demo.config
 
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Configuration
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder
 import org.springframework.security.config.annotation.web.builders.HttpSecurity
 import org.springframework.security.config.annotation.web.configuration.{EnableWebSecurity, WebSecurityConfigurerAdapter}
-import org.springframework.security.core.userdetails.User
-import org.springframework.security.core.userdetails.User.UserBuilder
 
-//noinspection ScalaDeprecation
+import javax.sql.DataSource
+
 @Configuration
 @EnableWebSecurity
 class SecurityConfig extends WebSecurityConfigurerAdapter {
+  @Autowired
+  private var securityDataSource: DataSource = _
+
   override def configure(auth: AuthenticationManagerBuilder): Unit = {
-    // Should not be used in production but fine for this demo
-    val users: UserBuilder = User.withDefaultPasswordEncoder()
-    auth.inMemoryAuthentication()
-      .withUser(users.username("john").password("test123").roles("EMPLOYEE"))
-      .withUser(users.username("mary").password("test123").roles("EMPLOYEE", "MANAGER"))
-      .withUser(users.username("susan").password("test123").roles("EMPLOYEE", "ADMIN"))
+    auth.jdbcAuthentication().dataSource(securityDataSource)
   }
 
   override def configure(http: HttpSecurity): Unit = {

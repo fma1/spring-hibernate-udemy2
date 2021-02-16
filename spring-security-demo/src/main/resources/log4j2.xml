@@ -32,7 +32,7 @@
         </Logger>
 
         <!-- Log custom packages -->
-        <Logger name="com.luv2code.springdemo" level="info" additivity="false">
+        <Logger name="com.luv2code.springsecurity" level="info" additivity="false">
             <AppenderRef ref="ConsoleError" />
         </Logger>
         <Logger name="com.luv2code.hibernate.demo.app" level="info" additivity="false">
