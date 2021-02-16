@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,6 +19,12 @@
         <hr />
 
         Welcome to the luv2code Company Home Page
+        <hr />
+
+        User: <security:authentication property="principal.username" />
+        <br />
+        Role(s): <security:authentication property="principal.authorities" />
+        <hr />
 
         <form:form action="${pageContext.request.contextPath}/logout" method="post">
             <input type="submit" value="Logout" />

@@ -60,6 +60,8 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.2.12.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:5.2.12.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:5.4.4" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-taglibs:5.4.4" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-acl:5.4.4" />
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.2.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.2.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-orm:5.2.8.RELEASE" />
