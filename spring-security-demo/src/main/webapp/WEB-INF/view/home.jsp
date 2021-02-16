@@ -30,11 +30,10 @@
             <a href="${pageContext.request.contextPath}/leaders">Leadership Meeting</a>
             (Only for Manager peeps)
         </p>
-        <!--
         <p>
-            <a href="${pageContext.request.contextPath}/"></a>
+            <a href="${pageContext.request.contextPath}/systems">IT Systems Meeting</a>
+            (Only for Admin peeps)
         </p>
-        -->
 
         <form:form action="${pageContext.request.contextPath}/logout" method="post">
             <input type="submit" value="Logout" />

@@ -9,5 +9,8 @@ class DemoController {
   def showHome(): String = "home"
 
   @GetMapping(Array("/leaders"))
-  def showLeaderHome(): String = "leaders"
+  def showLeaders(): String = "leaders"
+
+  @GetMapping(Array("/systems"))
+  def showSystems(): String = "systems"
 }
