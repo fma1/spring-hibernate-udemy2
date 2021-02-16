@@ -7,4 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping
 class DemoController {
   @GetMapping(Array("/"))
   def showHome(): String = "home"
+
+  @GetMapping(Array("/leaders"))
+  def showLeaderHome(): String = "leaders"
 }

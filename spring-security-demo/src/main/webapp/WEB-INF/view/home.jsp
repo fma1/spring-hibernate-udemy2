@@ -26,6 +26,16 @@
         Role(s): <security:authentication property="principal.authorities" />
         <hr />
 
+        <p>
+            <a href="${pageContext.request.contextPath}/leaders">Leadership Meeting</a>
+            (Only for Manager peeps)
+        </p>
+        <!--
+        <p>
+            <a href="${pageContext.request.contextPath}/"></a>
+        </p>
+        -->
+
         <form:form action="${pageContext.request.contextPath}/logout" method="post">
             <input type="submit" value="Logout" />
         </form:form>
