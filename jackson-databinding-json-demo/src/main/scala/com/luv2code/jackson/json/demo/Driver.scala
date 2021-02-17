@@ -10,7 +10,7 @@ object Driver {
     .build()
 
   def main(args: Array[String]): Unit = {
-    val content = getClass.getClassLoader.getResource("sample-lite.json")
+    val content = getClass.getClassLoader.getResource("sample-full.json")
     val student = mapper.readValue(content, new TypeReference[Student]{})
     println(s"Student First Name: ${student.firstName}")
     println(s"Student Last Name: ${student.lastName}")
