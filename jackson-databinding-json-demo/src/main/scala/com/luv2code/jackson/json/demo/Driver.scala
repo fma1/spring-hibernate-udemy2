@@ -14,5 +14,7 @@ object Driver {
     val student = mapper.readValue(content, new TypeReference[Student]{})
     println(s"Student First Name: ${student.firstName}")
     println(s"Student Last Name: ${student.lastName}")
+    println(s"Student Address: ${student.address}")
+    println(s"Student Languages: ${student.languages.mkString("Array(", ", ", ")")}")
   }
 }
