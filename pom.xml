@@ -254,5 +254,6 @@
       <module>web-customer-tracker-aop</module>
       <module>spring-security-demo</module>
       <module>jackson-databinding-json-demo</module>
+      <module>spring-rest-demo</module>
     </modules>
 </project>
