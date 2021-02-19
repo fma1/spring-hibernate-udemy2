@@ -13,6 +13,11 @@
 
     </Appenders>
     <Loggers>
+        <!-- Debug JSON serialization -->
+        <Logger name="org.springframework.web.servlet.mvc.method.annotation" level="DEBUG" additivity="false">
+            <AppenderRef ref="Console" />
+        </Logger>
+
         <Logger name="org.springframework" level="DEBUG" additivity="false">
             <AppenderRef ref="Console" />
         </Logger>

@@ -1,19 +1,42 @@
 package com.luv2code.springdemo.rest.config
 
+import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.module.scala.DefaultScalaModule
 import com.mchange.v2.c3p0.ComboPooledDataSource
 import org.hibernatewrapper.SessionFactoryWrapper
 import org.springframework.context.annotation.{Bean, ComponentScan, Configuration}
+import org.springframework.http.converter.HttpMessageConverter
+import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter
 import org.springframework.orm.hibernate5.{HibernateTransactionManager, LocalSessionFactoryBean}
 import org.springframework.transaction.PlatformTransactionManager
 import org.springframework.transaction.annotation.EnableTransactionManagement
 import org.springframework.web.servlet.config.annotation.{DefaultServletHandlerConfigurer, EnableWebMvc, ResourceHandlerRegistry, ViewControllerRegistry, WebMvcConfigurer}
 import org.springframework.web.servlet.view.InternalResourceViewResolver
 
+import java.util
+
 @EnableWebMvc
 @EnableTransactionManagement
 @Configuration
 @ComponentScan(basePackages = Array("com.luv2code.springdemo.rest.*"))
 class AppConfig extends WebMvcConfigurer {
+  @Bean
+  def objectMapper(): ObjectMapper = {
+    val objectMapper = new ObjectMapper()
+    objectMapper.registerModule(DefaultScalaModule)
+    objectMapper
+  }
+
+  @Bean
+  def mappingJackson2HttpMessageConverter(): MappingJackson2HttpMessageConverter = {
+    val mappingJackson2HttpMessageConverter = new MappingJackson2HttpMessageConverter(objectMapper())
+    mappingJackson2HttpMessageConverter
+  }
+
+  override def configureMessageConverters(converters: util.List[HttpMessageConverter[_]]): Unit = {
+    converters.add(mappingJackson2HttpMessageConverter())
+  }
+
   @Bean
   def sessionFactory(): LocalSessionFactoryBean = {
     val sessionFactory = new LocalSessionFactoryBean
