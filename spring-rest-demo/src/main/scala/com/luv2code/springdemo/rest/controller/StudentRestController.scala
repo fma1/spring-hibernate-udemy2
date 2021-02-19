@@ -29,9 +29,18 @@ class StudentRestController {
   def getStudents: ArrayBuffer[Student] = aryBuf
 
   @ExceptionHandler
-  def handleException(exception: StudentNotFoundException): ResponseEntity[StudentErrorResponse] = {
-    val studentErrorResponse = StudentErrorResponse(HttpStatus.NOT_FOUND.value(),
-      exception.getMessage, System.currentTimeMillis())
-    new ResponseEntity[StudentErrorResponse](studentErrorResponse, HttpStatus.NOT_FOUND)
-  }
+  def handleException(exception: StudentNotFoundException): ResponseEntity[StudentErrorResponse] =
+    new ResponseEntity[StudentErrorResponse](
+      StudentErrorResponse(HttpStatus.NOT_FOUND.value(),
+        exception.getMessage,
+        System.currentTimeMillis()),
+      HttpStatus.NOT_FOUND)
+
+  @ExceptionHandler
+  def handleException(exception: Exception): ResponseEntity[StudentErrorResponse] =
+    new ResponseEntity[StudentErrorResponse](
+      StudentErrorResponse(HttpStatus.BAD_REQUEST.value(),
+        exception.getMessage,
+        System.currentTimeMillis()),
+      HttpStatus.BAD_REQUEST)
 }
