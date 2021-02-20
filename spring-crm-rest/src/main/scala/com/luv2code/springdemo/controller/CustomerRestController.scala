@@ -1,6 +1,7 @@
 package com.luv2code.springdemo.controller
 
 import com.luv2code.springdemo.entity.Customer
+import com.luv2code.springdemo.exception.CustomerNotFoundException
 import com.luv2code.springdemo.service.CustomerService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation._
@@ -33,5 +34,16 @@ class CustomerRestController {
   def updateCustomer(@RequestBody customer: Customer): Customer = {
     customerService.saveCustomer(customer)
     customer
+  }
+
+  @DeleteMapping(Array("/customers/{customerId}"))
+  def deleteCustomer(@PathVariable customerId: Int): String = {
+    Option(customerService.getCustomerById(customerId)) match {
+      case Some(_) =>
+        customerService.deleteCustomer(customerId)
+        s"Deleted customer id - $customerId"
+      case None =>
+        throw new CustomerNotFoundException(s"Customer id not found - $customerId")
+    }
   }
 }
