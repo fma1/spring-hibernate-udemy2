@@ -8,15 +8,15 @@ import org.springframework.web.bind.annotation._
 import java.util.{List => JList}
 
 @RestController
-@RequestMapping(Array("/customer"))
+@RequestMapping(Array("/api"))
 class CustomerRestController {
   @Autowired
   private var customerService: CustomerService = _
 
-  @GetMapping("/customers")
+  @GetMapping(Array("/customers"))
   def getCustomers: JList[Customer] = customerService.getCustomers
 
-  @GetMapping("/customers/{customerId}")
+  @GetMapping(Array("/customers/{customerId}"))
   def getCustomer(@PathVariable customerId: Int): Customer =
     customerService.getCustomerById(customerId)
 }

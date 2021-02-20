@@ -61,7 +61,7 @@ class AppConfig extends WebMvcConfigurer {
   def sessionFactory(): LocalSessionFactoryBean = {
     val sessionFactory = new LocalSessionFactoryBean
     sessionFactory.setDataSource(dataSource())
-    sessionFactory.setPackagesToScan("com.luv2code.springdemo.rest.entity")
+    sessionFactory.setPackagesToScan("com.luv2code.springdemo.entity")
     sessionFactory.setHibernateProperties(hibernateProperties)
     sessionFactory
   }
