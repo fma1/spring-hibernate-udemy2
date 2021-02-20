@@ -255,5 +255,6 @@
       <module>spring-security-demo</module>
       <module>jackson-databinding-json-demo</module>
       <module>spring-rest-demo</module>
+      <module>spring-crm-rest</module>
     </modules>
 </project>
