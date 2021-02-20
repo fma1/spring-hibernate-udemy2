@@ -19,4 +19,13 @@ class CustomerRestController {
   @GetMapping(Array("/customers/{customerId}"))
   def getCustomer(@PathVariable customerId: Int): Customer =
     customerService.getCustomerById(customerId)
+
+  @PostMapping(Array("/customers"))
+  def addCustomer(@RequestBody customer: Customer): Customer = {
+    // saveOrUpdate checks primary key
+    // primary key of 0 means INSERT rather than UPDATE
+    customer.setId(0)
+    customerService.saveCustomer(customer)
+    customer
+  }
 }
