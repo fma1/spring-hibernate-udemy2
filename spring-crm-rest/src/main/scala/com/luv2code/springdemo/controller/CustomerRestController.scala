@@ -28,4 +28,10 @@ class CustomerRestController {
     customerService.saveCustomer(customer)
     customer
   }
+
+  @PutMapping(Array("/customers"))
+  def updateCustomer(@RequestBody customer: Customer): Customer = {
+    customerService.saveCustomer(customer)
+    customer
+  }
 }
