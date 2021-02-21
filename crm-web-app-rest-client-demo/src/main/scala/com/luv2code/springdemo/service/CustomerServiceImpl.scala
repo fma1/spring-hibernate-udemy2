@@ -3,12 +3,12 @@ package com.luv2code.springdemo.service
 import com.luv2code.springdemo.dao.CustomerDAO
 import com.luv2code.springdemo.entity.Customer
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.stereotype.Repository
+// import org.springframework.stereotype.Service
 
 import java.util.{List => JList}
 import javax.transaction.Transactional
 
-@Repository
+// @Service
 class CustomerServiceImpl extends CustomerService {
   @Autowired
   private var customerDAO: CustomerDAO = _
