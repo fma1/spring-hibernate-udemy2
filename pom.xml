@@ -256,5 +256,6 @@
       <module>jackson-databinding-json-demo</module>
       <module>spring-rest-demo</module>
       <module>spring-crm-rest</module>
+      <module>crm-web-app-rest-client-demo</module>
     </modules>
 </project>
