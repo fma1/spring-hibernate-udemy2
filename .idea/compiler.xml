@@ -15,6 +15,7 @@
         <module name="spring-mvc-demo" />
         <module name="web-customer-tracker" />
         <module name="web-customer-tracker-aop" />
+        <module name="spring-crm-rest-security" />
         <module name="hb-05-many-to-many" />
         <module name="spring-crm-rest" />
         <module name="jackson-databinding-json-demo" />
@@ -41,6 +42,7 @@
       <module name="jackson-databind-json-demo" target="1.8" />
       <module name="jackson-databinding-json-demo" target="1.8" />
       <module name="spring-crm-rest" target="1.8" />
+      <module name="spring-crm-rest-security" target="1.8" />
       <module name="spring-demo-annotations" target="1.8" />
       <module name="spring-hibernate-udemy2" target="1.8" />
       <module name="spring-mvc-demo" target="1.8" />

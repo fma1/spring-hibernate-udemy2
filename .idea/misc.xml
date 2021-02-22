@@ -3,6 +3,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/crm-web-app-rest-client-demo" />
     <file type="web" url="file://$PROJECT_DIR$/spring-crm-rest" />
+    <file type="web" url="file://$PROJECT_DIR$/spring-crm-rest-security" />
     <file type="web" url="file://$PROJECT_DIR$/spring-mvc-demo" />
     <file type="web" url="file://$PROJECT_DIR$/spring-rest-demo" />
     <file type="web" url="file://$PROJECT_DIR$/spring-security-demo" />

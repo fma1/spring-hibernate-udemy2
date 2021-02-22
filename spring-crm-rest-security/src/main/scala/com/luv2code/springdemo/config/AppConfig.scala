@@ -67,6 +67,27 @@ class AppConfig extends WebMvcConfigurer {
   }
 
   @Bean
+  def securityDataSource(): ComboPooledDataSource = {
+    val securityDataSource = new ComboPooledDataSource
+
+    val jdbcUrl = "jdbc:mysql://localhost:3306/spring_security_demo_bcrypt?useSSL=false"
+
+    // Just to confirm we're reading the data from the properties file
+    // Would probably want to remove in a production environment
+    logger.info(s">>> jdbc.user=${env.getProperty(JDBC_USER)}")
+
+    securityDataSource.setDriverClass(env.getProperty(JDBC_DRIVER))
+    securityDataSource.setJdbcUrl(jdbcUrl)
+    securityDataSource.setUser(env.getProperty(JDBC_USER))
+    securityDataSource.setPassword(env.getProperty(JDBC_PASSWORD))
+    securityDataSource.setInitialPoolSize(env.getProperty(CONNECTION_POOL_INITIAL_POOL_SIZE).toInt)
+    securityDataSource.setMinPoolSize(env.getProperty(CONNECTION_POOL_MIN_POOL_SIZE).toInt)
+    securityDataSource.setMaxPoolSize(env.getProperty(CONNECTION_POOL_MAX_POOL_SIZE).toInt)
+    securityDataSource.setMaxIdleTime(env.getProperty(CONNECTION_POOL_MAX_IDLE_TIME).toInt)
+    securityDataSource
+  }
+
+  @Bean
   def dataSource(): ComboPooledDataSource = {
     val securityDataSource = new ComboPooledDataSource
 
