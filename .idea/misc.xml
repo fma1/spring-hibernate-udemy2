@@ -2,6 +2,7 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/crm-web-app-rest-client-demo" />
+    <file type="web" url="file://$PROJECT_DIR$/spring-boot-mycoolapp" />
     <file type="web" url="file://$PROJECT_DIR$/spring-crm-rest" />
     <file type="web" url="file://$PROJECT_DIR$/spring-crm-rest-security" />
     <file type="web" url="file://$PROJECT_DIR$/spring-mvc-demo" />

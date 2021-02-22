@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="hb-04-one-to-many-uni" />
         <module name="spring-security-demo" />
+        <module name="spring-boot-mycoolapp" />
         <module name="hb-eager-vs-lazy-demo" />
         <module name="hibernate-tutorial" />
         <module name="spring-demo-annotations" />
@@ -41,6 +42,7 @@
       <module name="hibernate-wrapper" target="1.8" />
       <module name="jackson-databind-json-demo" target="1.8" />
       <module name="jackson-databinding-json-demo" target="1.8" />
+      <module name="spring-boot-mycoolapp" target="1.8" />
       <module name="spring-crm-rest" target="1.8" />
       <module name="spring-crm-rest-security" target="1.8" />
       <module name="spring-demo-annotations" target="1.8" />

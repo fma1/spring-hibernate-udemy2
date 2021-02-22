@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="spring-boot-mycoolapp:war">
+    <output-path>$PROJECT_DIR$/spring-boot-mycoolapp/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>spring-boot-mycoolapp</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="spring-boot-mycoolapp-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="spring-boot-mycoolapp:war exploded" />
+    </root>
+  </artifact>
+</component>
