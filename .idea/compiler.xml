@@ -19,6 +19,7 @@
         <module name="spring-crm-rest-security" />
         <module name="hb-05-many-to-many" />
         <module name="spring-crm-rest" />
+        <module name="spring-boot-crud-demo" />
         <module name="jackson-databinding-json-demo" />
         <module name="hibernate-wrapper" />
         <module name="hb-03-one-to-many" />
@@ -42,6 +43,7 @@
       <module name="hibernate-wrapper" target="1.8" />
       <module name="jackson-databind-json-demo" target="1.8" />
       <module name="jackson-databinding-json-demo" target="1.8" />
+      <module name="spring-boot-crud-demo" target="1.8" />
       <module name="spring-boot-mycoolapp" target="1.8" />
       <module name="spring-crm-rest" target="1.8" />
       <module name="spring-crm-rest-security" target="1.8" />
