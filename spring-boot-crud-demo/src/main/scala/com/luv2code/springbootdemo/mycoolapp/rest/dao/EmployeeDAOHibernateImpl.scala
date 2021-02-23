@@ -14,8 +14,25 @@ class EmployeeDAOHibernateImpl extends EmployeeDAO {
   private var entityManager: EntityManager = _
 
   override def findAll(): JList[Employee] = {
-    val currentSession = entityManager.unwrap(classOf[Session])
-    currentSession.createQuery("from Employee", classOf[Employee])
+    entityManager.unwrap(classOf[Session])
+      .createQuery("from Employee", classOf[Employee])
       .getResultList
+  }
+
+  override def findById(id: Int): Employee = {
+    entityManager.unwrap(classOf[Session])
+      .get(classOf[Employee], id)
+  }
+
+  override def save(employee: Employee): Unit = {
+    entityManager.unwrap(classOf[Session])
+      .saveOrUpdate(employee)
+  }
+
+  override def deleteById(id: Int): Unit = {
+    entityManager.unwrap(classOf[Session])
+      .createQuery("delete from Employee where id=:employeeId")
+      .setParameter("employeeId", id)
+      .executeUpdate()
   }
 }

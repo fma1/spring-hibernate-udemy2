@@ -6,4 +6,7 @@ import java.util.{List => JList}
 
 trait EmployeeDAO {
   def findAll(): JList[Employee]
+  def findById(id: Int): Employee
+  def save(employee: Employee): Unit
+  def deleteById(id: Int): Unit
 }
