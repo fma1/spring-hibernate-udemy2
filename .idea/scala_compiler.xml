@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ScalaCompilerConfiguration">
-    <profile name="Maven 1" modules="crm-web-app-rest-client-demo,hb-01-one-to-one-uni,hb-02-one-to-one-bi,hb-03-one-to-many,hb-04-one-to-many-uni,hb-05-many-to-many,hb-eager-vs-lazy-demo,hibernate-employee-exercise,hibernate-employee-exercise (1),hibernate-tutorial,hibernate-wrapper,jackson-databind-json-demo,jackson-databinding-json-demo,spring-boot-crud-demo,spring-boot-mycoolapp,spring-crm-rest,spring-crm-rest-security,spring-demo-annotations,spring-hibernate-udemy2,spring-mvc-demo,spring-rest-demo,spring-security-demo,web-customer-tracker,web-customer-tracker-aop" />
+    <profile name="Maven 1" modules="crm-web-app-rest-client-demo,hb-01-one-to-one-uni,hb-02-one-to-one-bi,hb-03-one-to-many,hb-04-one-to-many-uni,hb-05-many-to-many,hb-eager-vs-lazy-demo,hibernate-employee-exercise,hibernate-employee-exercise (1),hibernate-tutorial,hibernate-wrapper,jackson-databind-json-demo,jackson-databinding-json-demo,spring-boot-crud-demo,spring-boot-data-rest-cruddemo,spring-boot-mycoolapp,spring-crm-rest,spring-crm-rest-security,spring-demo-annotations,spring-hibernate-udemy2,spring-mvc-demo,spring-rest-demo,spring-security-demo,web-customer-tracker,web-customer-tracker-aop" />
   </component>
 </project>
